@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Speech to Text</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-time Speech to Text 🎤</h1>
+        <div class="controls">
+            <button id="startButton" class="button">Start Recording</button>
+            <button id="stopButton" class="button" disabled>Stop Recording</button>
+        </div>
+        <div class="status-container">
+            <p id="status">Click Start Recording to begin...</p>
+            <div id="transcription" class="transcription-box"></div>
+        </div>
+    </div>
+    <script src="/static/index.js"></script>
+</body>
+</html>
