@@ -6,18 +6,9 @@ import uvicorn
 import asyncio
 from dotenv import load_dotenv
 load_dotenv()
-from deepgram import (
-    DeepgramClient,
-    DeepgramClientOptions,
-    LiveOptions,
-    LiveTranscriptionEvents
-)
-import logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 from transcription import DeepgramConnection
 
-DEEPGRAM_API_KEY = os.getenv("DEEPGRAM_API_KEY")
+
 PATH_STATIC_FILES = r"C:\python\deepgram\project-2\app\Frontend\static"
 PATH_TEMPLATES = r"C:\python\deepgram\project-2\app\Frontend\templates"
 
@@ -49,4 +40,4 @@ async def handle_websocket_conn(websocket:WebSocket):
 
 
 if __name__ =="__main__":
-    uvicorn.run("main:app",port=5050,host="0.0.0.0",reload=True)
+    uvicorn.run("main:app",port=9000,host="0.0.0.0",reload=True)
